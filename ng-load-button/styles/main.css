@@ -1,0 +1,33 @@
+body {
+	padding: 4em;
+	text-align: center;
+	font-family: roboto;
+	color: whitesmoke;
+}
+
+.md-raised {
+	margin: 3em 0;
+}
+
+#tab1-content {
+	padding-top: 2em;
+  background-color: #3F51B5;
+  height: 15em; }
+
+#tab2-content {
+	padding-top: 2em;
+  background-color: #673AB7;
+  height: 15em; }
+
+#tab3-content {
+	padding-top: 2em;
+  background-color: #00796B;
+  height: 15em; }
+
+.tabsdemoStaticTabs {
+	 color: white;
+    width: 100%;
+    height: 100%;
+	-webkit-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+}
