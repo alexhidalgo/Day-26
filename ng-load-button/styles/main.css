@@ -36,3 +36,15 @@ body {
 	margin: 4em 0;
 
 }
+
+.user-container1 {
+	width: 50%;
+}
+
+.user-container2 {
+	width: 50%;
+}
+
+form {
+	margin-bottom: 5em;
+}

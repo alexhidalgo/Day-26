@@ -33,4 +33,6 @@ app.controller('LoadButtonCtrl', function($scope, $timeout){
 	$scope.previous = function() {
     $scope.data.selectedIndex = Math.max($scope.data.selectedIndex - 1, 0);
   };
+}).controller('SignUpCtrl', function($scope){
+
 });
