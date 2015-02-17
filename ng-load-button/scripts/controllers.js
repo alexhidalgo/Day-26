@@ -25,14 +25,15 @@ app.controller('LoadButtonCtrl', function($scope, $timeout){
 }).controller('TabCtrl', function($scope){
 
 	$scope.data = {
-		selectedIndex: 0
+		selectedIndex: 1
 	};
-	$scope.next = function() {
-		$scope.data.selectedIndex = Math.min($scope.data.selectedIndex + 1, 2) ;
-	};
-	$scope.previous = function() {
-    $scope.data.selectedIndex = Math.max($scope.data.selectedIndex - 1, 0);
-  };
+
+	// $scope.next = function() {
+	// 	$scope.data.selectedIndex = Math.min($scope.data.selectedIndex + 1, 2) ;
+	// };
+	// $scope.previous = function() {
+ //    $scope.data.selectedIndex = Math.max($scope.data.selectedIndex - 1, 0);
+ //  };
 }).controller('SignUpCtrl', function($scope){
 
 });
