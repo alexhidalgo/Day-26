@@ -31,7 +31,7 @@
             Content 3
           </md-tab>
         </md-tabs>
-        <div ng-show="data.selectedIndex" class="tabpanel-container">
+        <div class="tabpanel-container">
           <div
             id="tab1-content"
             ng-show="data.selectedIndex === 1"
@@ -57,27 +57,26 @@
 
       </div>
 
-    <md-button class="md-primary like-button" ng-click="count = count + 1" ng-init="count = 0">{{ count }} Likes
-    </md-button>
-    <form name="userForm">
-      <div class="input-group" layout="row">
-        <md-input-container class="user-container1">
-          <label>Email</label>
-          <input name="email" type="email" ng-model="user.name">
-          <div ng-messages="userForm.name.$error">
-            <div ng-message="email">Please enter an email address</div>
-          </div>
-        </md-input-container>
-        <md-input-container class="user-container2">
-          <label>Password</label>
-          <input id="password" type="password"required name="password" ng-model="user.password">
-          <div ng-messages="userForm.email.$error">
-            <div ng-message="password">Please enter a password</div>
-          </div>
-        </md-input-container>
-      </div>
-    </form>
-      </md-content>
+      <md-button class="md-primary like-button" ng-click="count = count + 1" ng-init="count = 0">{{ count }} Likes
+      </md-button>
+
+      <form ng-submit="submit()"ng-controller="SignUpCtrl" name="userForm">
+        <div class="input-group" layout="row">
+          <md-input-container class="user-container1">
+            <label>Email</label>
+            <input name="email" type="email" ng-model="user.email">
+            <p class="alert" ng-show="!user.email">Please enter an email address before logging in.</p>
+          </md-input-container>
+          <md-input-container class="user-container2">
+            <label>Password</label>
+            <input id="password" type="password" name="password" ng-model="user.password">
+            <p class="alert" ng-show="!user.password">Please enter a password before logging in.</p>
+          </md-input-container>
+        </div>
+        <input type="submit">
+      </form>
+
+    </md-content>
       <!-- <div ng-controller="AppCtrl"> -->
         <!-- <input type="text" ng-model="name">
         <div ng-bind="name"></div>

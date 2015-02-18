@@ -6,7 +6,8 @@
 // 	}
 // });
 
-app.controller('LoadButtonCtrl', function($scope, $timeout){
+angular.module('app.controllers', [])
+.controller('LoadButtonCtrl', function($scope, $timeout){
 	// $scope.buttonText = 'Click Me';
 	// $scope.buttonDisabled = false;
 	$scope.buttonText = "Click Me";
@@ -34,6 +35,25 @@ app.controller('LoadButtonCtrl', function($scope, $timeout){
 	// $scope.previous = function() {
  //    $scope.data.selectedIndex = Math.max($scope.data.selectedIndex - 1, 0);
  //  };
-}).controller('SignUpCtrl', function($scope){
+}).controller('SignUpCtrl', function($scope, $location){
+
+	var user1 = {
+		email: 'aaron@theironyard.com',
+		password: 'password123'
+	};
+
+
+
+	$scope.submit = function() {
+		if(user1.email === $scope.user.email &&
+		user1.password === $scope.user.password) {
+		$location.path('/ironyard.com').replace();
+		console.log('correct email and password');
+	} else {
+		//show error
+		console.log('wrong email and password');
+
+	}
+	};
 
 });

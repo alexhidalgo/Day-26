@@ -47,4 +47,9 @@ body {
 
 form {
 	margin-bottom: 5em;
+	color: black;
+}
+
+form p {
+	color: red;
 }

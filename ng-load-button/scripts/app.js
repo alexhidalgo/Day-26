@@ -6,4 +6,4 @@
 // 	// Put code here that should get run right as the app boots up
 // });
 
-var app = angular.module('app', ['ngMaterial']);
+angular.module('app', ['app.controllers', 'ngMaterial']);
